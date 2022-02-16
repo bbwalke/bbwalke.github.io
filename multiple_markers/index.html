@@ -12,11 +12,18 @@
     <a-scene embedded arjs>
 
       <a-marker preset="hiro">
-          <a-entity gltf-model="models/bomb-2.glb" radius=".5" material="opacity: 0.7;" color="red" position="0 1 0">
-            </a-entity>
+          <a-sphere radius=".5" material="opacity: 0.7;" color="red" position="0 1 0"></a-sphere>
       </a-marker>
         
+      <a-marker preset="kanji">  
+        <a-box material="opacity: 0.7;" color="green"></a-box>
+    </a-entity>
+      </a-marker>  
       
+      <a-marker id="zb" type="pattern" url="markers/patt.zb">
+        <a-entity position="0 0 0" gltf-model="models/Cubone.glb" rotation="0 90 0" scale="1 1 1">
+        </a-entity>
+      </a-marker>  
       
      <a-entity camera></a-entity>
     </a-scene>
