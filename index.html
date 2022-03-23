@@ -1,0 +1,64 @@
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+<body>
+  
+    <a-scene antialias="true">
+	
+	<a-assets>
+		<img id="night1" src="images2/night1" crossorigin="anonymous" />
+       	 	<img id="night2" src="images2/night2" crossorigin="anonymous" />
+	</a-assets>
+		
+	<a-night1 
+		color = "#FFFFFF"
+		material = "src: #night1">
+	</a-night1>
+    
+      <a-box
+	     <a-entity
+	    gltf-model="models/skeloton.glb.glb"
+	    position="-2 2 -2"
+        scale=".2 .2 .2"     
+        rotation="0 45 0"
+        value="Nine O'Clock"
+        align="center"
+        event-set__enter="_event: mouseenter; _target: a-night1; material.src: #night1"   
+	    </a-entity>
+	    
+      ></a-box>  
+	    
+     <a-box
+        position="2 2 -2"
+        scale=".2 .2 .2" 
+        rotation="0 -45 0"
+        value="Three O'Clock"
+        align="center"
+        event-set__enter="_event: mouseenter; _target: a-night1; material.src: #night2"
+	
+      ></a-box>  
+	    
+     <a-box
+        position="0 2 2.5"
+        scale=".2 .2 .2" 
+        rotation="0 180 0"
+        value="Six O'Clock"
+        align="center"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #whisky_room"     
+      ></a-box> 
+
+     <a-box
+        position="2 2 2.5"
+        scale=".2 .2 .2" 
+        rotation="0 180 0"
+        value="Six O'Clock"
+        align="center"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #marriot"     
+      ></a-box> 
+
+    <a-camera>
+        <a-cursor color=#ff77ff></a-cursor>
+    </a-camera>
+	
+</a-scene>
+    
+</body>
